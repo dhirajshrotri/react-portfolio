@@ -1,0 +1,18 @@
+.navigationSection {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  gap: 1em;
+}
+
+.navigationTab {
+  font-size: 1em;
+  padding: 0.5em;
+  border: 2px solid #5a5a5a;
+  color: #5a5a5a;
+  background: none;
+}
+
+button:focus {outline:0;}
+

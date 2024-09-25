@@ -1,31 +1,25 @@
+@font-face {
+  font-family: 'BerkeleyMono';
+  src: local('BerkeleyMono-Regular'), url(./fonts/BerkeleyMono-Regular.ttf) format('truetype');
+
+}
+
+body {
+  background-color: #EAE7DC;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #EAE7DC;
+  height: 99vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  color: #E85A4F;
+  width: 100%;
+  font-family: 'BerkeleyMono';
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +29,43 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 100%
+}
+
+.NameContainer {
+  align-self: end;
+}
+
+.NameContainer h2 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.CardsContainers {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  gap: 2em;
+  height: 100%;
+}
+
+span {
+  font-size: 0.3em;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  color: #5a5a5a;
+  border: 2px solid #5a5a5a;
 }
