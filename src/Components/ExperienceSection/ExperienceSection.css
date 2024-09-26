@@ -5,6 +5,7 @@
   align-items: center;
   position: relative;
   margin-left: 1em;
+  width: 100%;
 }
 
 .headline-container {
@@ -80,10 +81,26 @@
   grid-column-gap: 5em;
   width: 100%;
   font-size: medium;
-  margin-left: 1em;
+  margin-left: 5em;
 }
 
 .experience-grid .box {
   display: flex;
   justify-content: start;
+  
+}
+
+.position-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.experience-description {
+  font-size: 0.5em;
+  margin: 1em;
+  margin-left: 5em;
+  text-align: start;
+  width: 90%;
 }

@@ -64,6 +64,7 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  align-items: start;
   width: 100%;
   height: 100%;
   color: #5a5a5a;
