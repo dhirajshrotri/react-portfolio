@@ -2,7 +2,7 @@ import './App.css';
 import './fonts/BerkeleyMono-Regular.ttf'
 import { NavigationBar } from './Components/NavigationBar/NavigationBar'
 import { AboutSection } from './Components/AboutSection/AboutSection';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ExperienceSection } from './Components/ExperienceSection/ExperienceSection';
 import { BlogSection } from './Components/BlogSection/BlogSection';
 import { ProjectSection } from './Components/ProjectsSection/ProjectsSection';
@@ -11,6 +11,7 @@ import { ContactSection } from './Components/ContactSection/ContactSection';
 function App() {
   
   const [selectedSection, setSelectedSection] = useState('About')
+
   return (
     <div className="App">
       <div className="MainContainer">

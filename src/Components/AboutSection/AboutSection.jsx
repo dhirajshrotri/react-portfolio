@@ -35,24 +35,32 @@ export const AboutSection = () => {
   const [skillVisible, setSkillVisible] = useState('Frontend')
   const skillArr = ['Frontend', 'Backend', 'Cloud']
 
-  const changeBackground = (e) => {
-    e.target.style.color = '#5a5a5a';
-    e.target.style.background = '#E85A4F'
-    e.target.style.border = '2px solid #5a5a5a'
-    e.target.style.boxShadow = '0.5rem 0.5rem #5a5a5a'
-    setSkillVisible(e.target.innerHTML)
+  const changeBackground = (event) => {
+   setSkillVisible((prevSelection) => {
+      const el = document.getElementById(prevSelection)
+      revertBackground(el)
+      return event.target.innerHTML
+    })
   }
 
-  const revertBackground = (e) => {
-    e.target.style.color = '#5a5a5a';
-    e.target.style.border = '2px solid #5a5a5a'
-    e.target.style.boxShadow = ''
-    e.target.style.background = '#EAE7DC'
+  const revertBackground = (element) => {
+    element.style.color = '#5a5a5a';
+    element.style.border = '2px solid #5a5a5a'
+    element.style.boxShadow = ''
+    element.style.background = '#EAE7DC'
   }
 
   const handleElementClick = (elementName) => {
     setSkillVisible(elementName)
   }
+
+  useEffect(() => {
+    const e = document.getElementById(skillVisible)
+    e.style.color = '#5a5a5a';
+    e.style.background = '#E85A4F'
+    e.style.border = '2px solid #E85A4Fs'
+    e.style.boxShadow = '0.5rem 0.5rem #5a5a5a'
+  }, [skillVisible])
 
   return (
     <div className="main-container">
@@ -66,10 +74,9 @@ export const AboutSection = () => {
            <div className='skill-switch-btn-container'>
             {skillArr.map((el) => (
                 <button className='skillSwitcher'
+                  id={el}
                 onMouseOver={(e) => changeBackground(e)}
-                onMouseOut={(e) => revertBackground(e)}
                 onFocus={(e) => changeBackground(e)}
-                onBlur={(e) => revertBackground(e)}
                 onClick={() => handleElementClick(el)}
                 >
                   {el}

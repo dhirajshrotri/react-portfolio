@@ -1,8 +1,9 @@
 import './ExperienceSection.css'
 import { CiStar } from "react-icons/ci";
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export const ExperienceSection = () => {
+  const [prevIdx, setPrevIdx] = useState(0)
   const companies = ['TruWeather Solutions Inc.', 'Intralinks', 'Cloudnaut Technologies', 'Vodafone Shared Services India Pvt Ltd', 'Twintech Control Systems',]
   const experience = {
     'TruWeather Solutions Inc.' : [
@@ -51,24 +52,34 @@ export const ExperienceSection = () => {
     setSelectedSection(el)
   }
 
-  const changeBackground = (e, idx) => {
-    e.target.style.color = '#5a5a5a';
-    e.target.style.background = '#E85A4F'
-    e.target.style.border = '2px solid #E85A4Fs'
-    e.target.style.boxShadow = '0.5rem 0.5rem #5a5a5a'
-    console.log(document.getElementsByClassName('star-svg'))
+  const changeBackground = (event, idx) => {
     const el = document.getElementsByClassName('star-svg')[idx]
     el.style.background = '#E85A4F'
-    setSelectedSection(e.target.innerHTML)
+    setSelectedSection((prevSelection) => {
+      const el = document.getElementById(prevSelection)
+      revertBackground(el)
+      return event.target.innerHTML
+    })
+    setPrevIdx(idx)
   }
 
-  const revertBackground = (e, idx) => {
-    e.target.style.color = '#5a5a5a';
-    e.target.style.border = '2px solid #5a5a5a'
-    e.target.style.boxShadow = ''
-    e.target.style.background = '#EAE7DC'
-    document.getElementsByClassName('star-svg')[idx].style.background = 'none'
+  const revertBackground = (e) => {
+    e.style.color = '#5a5a5a';
+    e.style.border = '2px solid #5a5a5a'
+    e.style.boxShadow = ''
+    e.style.background = '#EAE7DC'
+    document.getElementsByClassName('star-svg')[prevIdx].style.background = 'none'
   }
+
+
+
+  useEffect(() => {
+    const e = document.getElementById(selectedSection)
+    e.style.color = '#5a5a5a';
+    e.style.background = '#E85A4F'
+    e.style.border = '2px solid #E85A4Fs'
+    e.style.boxShadow = '0.5rem 0.5rem #5a5a5a'
+  }, [selectedSection])
 
   return (
     <div className='main-container'>
@@ -81,8 +92,8 @@ export const ExperienceSection = () => {
                 </div>
                 <button
                   className='company-container company-navigation'
+                  id={el}
                   onFocus={(e) => changeBackground(e, idx)}
-                  onBlur={(e) => revertBackground(e, idx)}
                   onClick={() => handleElementClick(el)}
                 >
                   {el}
