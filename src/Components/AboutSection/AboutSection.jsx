@@ -63,7 +63,7 @@ export const AboutSection = () => {
   }, [skillVisible])
 
   return (
-    <div className="main-container">
+    <div className="main-container animate__animated animate__slideInDown">
       <div className="Introduction"> 
         <h6>I am a Full Stack Developer with 6 years experience.</h6>
         <p>As a seasoned full-stack developer with a strong focus on Node.js, React, and AWS, I am currently leading the frontend team at TruWeather Solutions. My expertise lies in building scalable and efficient applications, leveraging my in-depth knowledge of both backend and frontend technologies. With six years of experience in the industry, I excel at creating seamless user experiences while ensuring robust backend functionality, making me a versatile and valuable asset to any development team.</p>
@@ -84,7 +84,7 @@ export const AboutSection = () => {
               ))}
            </div>
             { skillVisible === 'Frontend' && (
-              <div className='icon-container'>
+              <div className='icon-container animate__animated animate__fadeInRight'>
                 <div className='grid-col'>
                   <div className='iconContainer'>
                     <DiAngularSimple className='icon'/>
@@ -140,7 +140,7 @@ export const AboutSection = () => {
               </div>
             )}
              { skillVisible === 'Backend' && (
-              <div className='icon-container'>
+              <div className='icon-container animate__animated animate__fadeInRight'>
                 <div className='grid-col'>
                   <div className='iconContainer'>
                     <DiNodejs className='icon'/>
@@ -206,7 +206,7 @@ export const AboutSection = () => {
               </div>
             )}
              { skillVisible === 'Cloud' && (
-                            <div className='icon-container'>
+                            <div className='icon-container animate__animated animate__fadeInRight'>
                             <div className='grid-col'>
                               <div className='iconContainer'>
                                 <DiAws className='icon'/>

@@ -1,4 +1,5 @@
 import './App.css';
+import 'animate.css';
 import './fonts/BerkeleyMono-Regular.ttf'
 import { NavigationBar } from './Components/NavigationBar/NavigationBar'
 import { AboutSection } from './Components/AboutSection/AboutSection';

@@ -84,7 +84,7 @@ export const ExperienceSection = () => {
   }, [selectedSection])
 
   return (
-    <div className='main-container'>
+    <div className='main-container animate__animated animate__slideInDown'>
       {
         companies.map((el, idx) =>
           <div className='container'>
@@ -102,7 +102,7 @@ export const ExperienceSection = () => {
                 </button>
               </div>
             {selectedSection === el && 
-              <div className='experience-container'>
+              <div className='experience-container animate__animated animate__slideInDown'>
                 {
                   experience[el].map((element) =>
                     <div className='position-description'>
