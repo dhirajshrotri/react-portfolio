@@ -79,6 +79,8 @@ export const ExperienceSection = () => {
     e.style.background = '#E85A4F'
     e.style.border = '2px solid #E85A4Fs'
     e.style.boxShadow = '0.5rem 0.5rem #5a5a5a'
+    const el = document.getElementsByClassName('star-svg')[prevIdx]
+    el.style.background = '#E85A4F'
   }, [selectedSection])
 
   return (
