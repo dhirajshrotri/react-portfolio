@@ -57,7 +57,7 @@ interface TimelineProps {
   darkMode: boolean;
 }
 
-const Timeline: React.FC = ({ darkMode}: TimelineProps) => {
+const Timeline: React.FC<TimelineProps> = ({ darkMode}) => {
   return (
     <div className="relative border-l-2 border-gray-200 ml-4 mt-6 space-y-10">
       {experiences.map((exp, idx) => (
