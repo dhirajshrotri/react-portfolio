@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaCode } from "react-icons/fa"; // LeetCode-like icon (FaCode is generic)
+import { FaGithub, FaLinkedin, FaCode, FaBloggerB } from "react-icons/fa"; // LeetCode-like icon (FaCode is generic)
 
 interface SidebarProps {
   menuOpen: boolean;
@@ -21,12 +21,13 @@ const Sidebar: React.FC<SidebarProps> = ({ menuOpen, closeMenu, darkMode }) => {
     github: "https://github.com/dhirajshrotri",
     linkedin: "https://www.linkedin.com/in/dhirajshrotri",
     leetcode: "https://leetcode.com/dhirajshrotri",
+    blog: "https://dev.to/dhiraj-shrotri"
   };
 
   return (
     <>
       {/* Sidebar for Desktop */}
-      <nav className={`hidden md:flex w-64 flex-col px-8 py-6 h-screen justify-between ${ darkMode ? "bg-[#1F305E] text-white" : "bg-[#ffffff] text-gray-800"}`}>
+      <nav className={`hidden md:flex w-64 flex-col px-8 py-6 h-screen justify-between ${ darkMode ? "bg-[#1F305E] text-white" : "bg-[#ffffff] text-red-400"}`}>
   {/* Top: Name */}
   <div>
     <h1 className="text-2xl font-bold text-red-400">Dhiraj Shrotri</h1>
@@ -42,7 +43,7 @@ const Sidebar: React.FC<SidebarProps> = ({ menuOpen, closeMenu, darkMode }) => {
             className="group flex items-center px-4 py-2 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-[#3F5185] transition-all duration-200"
           >
             <span className="w-1 h-6 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-all mr-3"></span>
-            <span className="group-hover:text-blue-600 dark:group-hover:text-white font-medium tracking-wide">
+            <span className={`group-hover:text-blue-600 dark:group-hover:text-white font-medium tracking-wide ${ darkMode ? "text-white" : "text-red-400"}`}>
               {item.label}
             </span>
           </a>
@@ -92,6 +93,21 @@ const Sidebar: React.FC<SidebarProps> = ({ menuOpen, closeMenu, darkMode }) => {
     }`}
   >
     <FaCode
+      className={`h-6 w-6 transition-colors ${
+        darkMode ? "text-white hover:text-yellow-400" : "text-gray-700 hover:text-blue-600"
+      }`}
+    />
+  </a>
+
+  <a
+    href={socialLinks.blog}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`p-2 rounded-full transition-colors ${
+      darkMode ? "hover:bg-[#3F5185]" : "hover:bg-gray-100"
+    }`}
+  >
+    <FaBloggerB
       className={`h-6 w-6 transition-colors ${
         darkMode ? "text-white hover:text-yellow-400" : "text-gray-700 hover:text-blue-600"
       }`}
