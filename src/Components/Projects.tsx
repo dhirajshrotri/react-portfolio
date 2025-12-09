@@ -12,16 +12,16 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       description:
         "A route creation app for cyclists and runners. Uses Dijkstra's algorithm with OpenStreetMap data to generate a loop of specified distance from a start point.",
       skills: ["React", "Leaflet", "OpenStreetMap", "Dijkstra's Algorithm"],
-      demo: "https://your-looper-demo-link.com",
-      github: "https://github.com/yourusername/looper",
+      demo: "https://looper.thisdotdev.com",
+      github: "https://github.com/dhirajshrotri/looper",
     },
     {
-      name: "Gym Tracker",
+      name: "Wellness Logger",
       description:
         "An app to track workouts in the gym. Built with Svelte on the frontend and Firebase datastore on the backend.",
       skills: ["Svelte", "Firebase", "TypeScript"],
       demo: "",
-      github: "https://github.com/yourusername/gym-tracker",
+      github: "https://github.com/dhirajshrotri/wellnesslogger",
     },
     {
       name: "Card Game (iOS)",
@@ -29,7 +29,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "A Swift-based iOS app created by following Stanford’s CS139p course on iOS development.",
       skills: ["Swift", "UIKit", "MVVM"],
       demo: "",
-      github: "https://github.com/yourusername/card-game",
+      github: "https://github.com/dhirajshrotri/card-game",
     },
   ];
 

@@ -19,7 +19,7 @@ const Sidebar: React.FC<SidebarProps> = ({ menuOpen, closeMenu, darkMode }) => {
   // Replace these URLs with your actual profile links
   const socialLinks = {
     github: "https://github.com/dhirajshrotri",
-    linkedin: "https://www.linkedin.com/in/dhirajshrotri",
+    linkedin: "https://www.linkedin.com/in/dhiraj-shrotri",
     leetcode: "https://leetcode.com/dhirajshrotri",
     blog: "https://dev.to/dhiraj-shrotri"
   };
