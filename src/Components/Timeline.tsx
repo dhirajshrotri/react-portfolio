@@ -80,7 +80,7 @@ const Timeline: React.FC<TimelineProps> = ({ darkMode}) => {
                   </h4>
                   <p className={`text-base font-medium ${darkMode ? 'text-white' : 'text-gray-500'}`}>{role.period}</p>
                 </div>
-                <p className={`${darkMode ? 'text-white' : 'text-gray-600'} mt-1 text-sm leading-relaxed`}>
+                <p className={`${darkMode ? 'text-white' : 'text-gray-600'} mt-1 text-sm leading-relaxed hidden md:block`}>
                   {role.description}
                 </p>
               </div>

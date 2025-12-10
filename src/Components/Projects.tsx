@@ -18,8 +18,8 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
     {
       name: "Wellness Logger",
       description:
-        "An app to track workouts in the gym. Built with Svelte on the frontend and Firebase datastore on the backend.",
-      skills: ["Svelte", "Firebase", "TypeScript"],
+        "An app to track workouts in the gym. Built with ReactNative on the frontend and GoLang REST API + Firebase datastore on the backend.",
+      skills: ["ReactNative", "Firebase", "GoLang", "TypeScript"],
       demo: "",
       github: "https://github.com/dhirajshrotri/wellnesslogger",
     },
@@ -36,9 +36,9 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
   return (
     <div
       className="
-        w-full
-        flex gap-4 overflow-x-auto snap-x snap-mandatory pb-6
-        md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:snap-none
+        w-full md:w-3/4
+        flex flex-col overflow-x-auto snap-x snap-mandatory
+        md:overflow-visible md:snap-none
         scrollbar-hide
       "
       style={{ WebkitOverflowScrolling: "touch" }}
@@ -46,7 +46,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       {projects.map((project) => (
         <div
           key={project.name}
-          className={`
+          className={`m-2
             snap-center flex-shrink-0
             min-w-[85%] mx-4
             md:min-w-0 md:mx-0
@@ -64,7 +64,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
           </h3>
 
           {/* Description */}
-          <p className="mb-4 text-sm md:text-base">{project.description}</p>
+          <p className="mb-4 text-sm md:text-base hidden md:block">{project.description}</p>
 
           {/* Skills */}
           <div className="flex flex-wrap gap-2 mb-4">
