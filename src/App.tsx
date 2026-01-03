@@ -4,6 +4,7 @@ import Section from "./Components/Section";
 import ContactForm from "./Components/ContactForm";
 import Timeline from "./Components/Timeline";
 import Projects from "./Components/Projects";
+import Certifications from "./Components/Certifications";
 
 const App: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -146,6 +147,10 @@ const App: React.FC = () => {
 
           <Section id="projects" title="Projects">
             <Projects darkMode={darkMode} />
+          </Section>
+
+          <Section id="certifications" title="Certifications">
+            <Certifications />
           </Section>
 
           <Section id="contact" title="Contact Me">
